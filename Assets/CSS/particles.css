@@ -122,7 +122,7 @@ body {
     margin-right: 0px;
     border-radius: 4px;
     font-family: "Krona One", sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     height: 62px;
     line-height: 1px;
 }
@@ -181,6 +181,9 @@ body {
 
     .typing-container>h1>span {
         font-size: 32px;
+    }
+    #particles-js {
+        height: 955px;
     }
 }
 
