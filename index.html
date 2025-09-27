@@ -16,6 +16,10 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
     <!-- Particle Plugin CSS -->
     <link rel="stylesheet" href="./Assets/CSS/particles.css">
@@ -28,7 +32,10 @@
 
 <body>
     <!-- Navbar component starts here -->
-    <div class="menu-open"><i style="font-size: 2rem;" class="fas fa-bars"></i></div>
+    <div class="menu-open">
+        <!-- <i style="font-size: 2rem;" class="fas fa-bars"></i> -->
+        <img src="./Assets/Images/Icons/menu.png" alt="">
+    </div>
     <div class="nav-container">
         <div class="menu-close"><i style="font-size: 2rem;" class="fas fa-times"></i></div>
         <div class="socials">
@@ -87,12 +94,19 @@
         <div class="banner-grid-row">
             <div>
                 <section class="typing-container">
-                    <h1>Hey 🙋🏻‍♂️, Ashish This Side <br> <span class="typing-text"></span></h1>
+                    <h1>Hey<b class="wave">👋🏻</b>, Ashish This Side <br> <span class="typing-text"></span></h1>
                 </section>
                 <div class="button-hire-resume">
-                    <a href=""><button class="hire-me">HIRE ME</button></a>
-                    <a href=""><button class="download-my-resume"><img src="./Assets/Images/Icons/download-pdf.png"
-                                alt="">&nbsp; DOWNLOAD CV</button></a>
+                    <!-- <a href=""><button class="hire-me">HIRE ME</button></a> -->
+                    <button class="button-4" role="button">
+                        <span class="text">HIRE ME</span>
+                    </button>
+                    <!-- <a href=""><button class="download-my-resume"><img src="./Assets/Images/Icons/download-pdf.png"
+                                alt="">&nbsp; DOWNLOAD CV</button></a> -->
+                    <button class="button-4 download-my-resume" role="button">
+                        <span class="text">DOWNLOAD
+                            CV</span>
+                    </button>
                 </div>
             </div>
             <div>
@@ -141,11 +155,48 @@
     <!-- Marquee component ends here -->
 
     <!-- About Us Component starts here -->
-    <section>
+    <section class="about-us-container">
+        <img src="./Assets/Images/About-us/Asset 2@4x 2.png" alt="">
         <div class="container">
+            <div class="about-us-row">
+                <div>
+                    <h2>About&nbsp; <span>Me</span></h2>
+                    <p>
+                        I am a <span>Sr. Software Developer</span> with <span>4.8 years of experience</span>. At SeekEx
+                        Technologies,
+                        I have <span>developed 16+ full-stack</span> projects using <span>React.js</span> and also built
+                        <span>2 mobile applications</span>
+                        with <span>Expo</span> and <span>React Native</span>. In addition, I created a <span>Truth or
+                            Dare game</span>, a modern and creative
+                        <span>music player app</span>, and have worked on <span>221+ static pages</span> along with
+                        <span>22+ React.js projects</span> and
+                        <span>8+ full-stack</span> applications independently.
+                    </p>
+                    <p>I completed my Bachelor of Computer Applications <span>(BCA)</span> from Babu Banarasi Das
+                        University,
+                        and during my third year, <span>I secured an off-campus placement</span> as a <span>Software
+                            Developer</span>. While
+                        working,
+                        I also pursued and completed my Master of Computer Applications <span>(MCA)</span>.</p>
+                </div>
+
+                <div>
+                    <div class="shape">
+                        <img class="shape"
+                            src="./Assets/Images/About-us/503209766_18292939240219048_2619529250213666161_n.jpg" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- About Us Component ends here -->
+
+
+    <!-- Footer component starts here -->
+    <footer class="footer">
+        <p>All Rights Reserved. &copy; 2025.</p>
+    </footer>
+    <!-- Footer Component ends here -->
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -260,6 +311,22 @@
         $(document).on("click", ".menu-close", function () {
             t1.reversed(!t1.reversed());
         });
+
+
+        // Text Animation script
+        const h2 = document.querySelector('.about-us-row > div:nth-child(1) > h2');
+        const text = h2.textContent;
+        h2.textContent = '';
+
+        // Wrap each letter in a span with staggered animation
+        text.split('').forEach((char, index) => {
+            const span = document.createElement('span');
+            span.textContent = char;
+            span.style.animationDelay = `${index * 0.1}s`; // stagger letters
+            h2.appendChild(span);
+        });
+
+
     </script>
 </body>
 
