@@ -900,7 +900,7 @@ button.button-4 .text {
 
 /* Sprinkle effect */
 .falling-text {
-    position: absolute;
+    position: fixed;
     z-index: 222;
     top: -100px;
     font-size: 40px;
