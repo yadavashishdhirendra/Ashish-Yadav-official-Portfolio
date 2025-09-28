@@ -41,7 +41,8 @@
         <div class="socials">
             <span><i style="color: var(--Pink);" class="fa-brands fa-linkedin-in"></i><a
                     style="text-decoration: none;padding: 10px;font-weight: 800;color: var(--Pink);"
-                    href="https://www.linkedin.com/in/ashish-dhirendra-yadav-599a531a4/" target="_blank">LinkedIn</a></span>
+                    href="https://www.linkedin.com/in/ashish-dhirendra-yadav-599a531a4/"
+                    target="_blank">LinkedIn</a></span>
             <span><i style="color: var(--Pink);" class="fab fa-github"></i><a
                     style="text-decoration: none;padding: 10px;font-weight: 800;color: var(--Pink);"
                     href="https://github.com/yadavashishdhirendra" target="_blank">Github</a></span>
@@ -194,7 +195,6 @@
     </section>
     <!-- About Us Component ends here -->
 
-
     <!-- Footer component starts here -->
     <footer class="footer">
         <div>
@@ -332,6 +332,35 @@
             h2.appendChild(span);
         });
 
+    </script>
+
+    <script>
+        const keywords = ["HTML", "CSS", "JavaScript", "React", "Node.js", "Git", "Python", "Vue.js", "AI 🤖", "Coding 🚀", "React Native"];
+
+        function createFallingText() {
+            const text = document.createElement("div");
+            text.classList.add("falling-text");
+            text.innerText = keywords[Math.floor(Math.random() * keywords.length)];
+
+            // random horizontal position
+            text.style.left = Math.random() * window.innerWidth + "px";
+
+            // random animation duration & delay
+            const duration = Math.random() * 5 + 5;
+            const delay = Math.random() * 3;
+            text.style.animationDuration = duration + "s";
+            text.style.animationDelay = delay + "s";
+
+            document.body.appendChild(text);
+
+            // remove element after animation ends
+            setTimeout(() => {
+                text.remove();
+            }, (duration + delay) * 1000);
+        }
+
+        // create new falling text every 500ms
+        setInterval(createFallingText, 500);
     </script>
 </body>
 
