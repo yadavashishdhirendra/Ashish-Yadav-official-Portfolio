@@ -34,7 +34,7 @@
     <!-- Navbar component starts here -->
     <div class="menu-open">
         <!-- <i style="font-size: 2rem;" class="fas fa-bars"></i> -->
-        <img src="./Assets/Images/Icons/menu.png" alt="">
+        <img src="./Assets/Images/Icons/menu.png" alt="" loading="lazy">
     </div>
     <div class="nav-container">
         <div class="menu-close"><i style="font-size: 2rem;" class="fas fa-times"></i></div>
@@ -50,7 +50,7 @@
         <nav class="menu">
             <div class="menu__item">
                 <a href="#" class="menu__item-link">Home</a>
-                <img class="menu__item-img" src="https://img.icons8.com/ios-filled/50/000000/home.png" />
+                <img class="menu__item-img" src="https://img.icons8.com/ios-filled/50/000000/home.png" loading="lazy" />
                 <div class="marquee">
                     <div class="marquee__inner">
                         <span>Home - Home - Home - Home - Home - Home - Home</span>
@@ -59,7 +59,7 @@
             </div>
             <div class="menu__item">
                 <a href="#" class="menu__item-link">Work</a>
-                <img class="menu__item-img" src="https://img.icons8.com/ios-filled/50/000000/work.png" />
+                <img class="menu__item-img" src="https://img.icons8.com/ios-filled/50/000000/work.png" loading="lazy" />
                 <div class="marquee">
                     <div class="marquee__inner">
                         <span>Work - Work - Work - Work - Work - Work
@@ -69,7 +69,7 @@
             </div>
             <div class="menu__item">
                 <a href="#" class="menu__item-link">About</a>
-                <img class="menu__item-img" src="https://img.icons8.com/ios-filled/50/000000/about.png" />
+                <img class="menu__item-img" src="https://img.icons8.com/ios-filled/50/000000/about.png" loading="lazy" />
                 <div class="marquee">
                     <div class="marquee__inner">
                         <span>About - About - About - About - About - About - About</span>
@@ -78,7 +78,7 @@
             </div>
             <div class="menu__item">
                 <a href="#" class="menu__item-link">Contact</a>
-                <img class="menu__item-img" src="https://img.icons8.com/ios-filled/50/000000/duplicate-contacts.png" />
+                <img class="menu__item-img" src="https://img.icons8.com/ios-filled/50/000000/duplicate-contacts.png" loading="lazy" />
                 <div class="marquee">
                     <div class="marquee__inner">
                         <span>Contact - Contact - Contact - Contact - Contact - Contact -
@@ -133,7 +133,7 @@
                     </div>
                 </div>
                 <div class="shape">
-                    <img class="shape" src="./Assets/Images/IMG_20230522_231359_629.jpg" alt="">
+                    <img class="shape" src="./Assets/Images/IMG_20230522_231359_629.jpg" alt="" loading="lazy">
                 </div>
             </div>
         </div>
@@ -160,7 +160,7 @@
 
     <!-- About Us Component starts here -->
     <section class="about-us-container">
-        <img src="./Assets/Images/About-us/Asset 2@4x 2.png" alt="">
+        <img src="./Assets/Images/About-us/Asset 2@4x 2.png" alt="" loading="lazy">
         <div class="container">
             <div class="about-us-row">
                 <div>
@@ -187,7 +187,7 @@
                 <div>
                     <div class="shape">
                         <img class="shape"
-                            src="./Assets/Images/About-us/503209766_18292939240219048_2619529250213666161_n.jpg" alt="">
+                            src="./Assets/Images/About-us/503209766_18292939240219048_2619529250213666161_n.jpg" alt="" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -338,6 +338,7 @@
         const keywords = ["HTML", "CSS", "JavaScript", "React", "Node.js", "Git", "Python", "Vue.js", "AI 🤖", "Coding 🚀", "React Native"];
 
         function createFallingText() {
+            if (document.querySelectorAll(".falling-text").length > 20) return;
             const text = document.createElement("div");
             text.classList.add("falling-text");
             text.innerText = keywords[Math.floor(Math.random() * keywords.length)];
@@ -360,7 +361,7 @@
         }
 
         // create new falling text every 500ms
-        setInterval(createFallingText, 500);
+        setInterval(createFallingText, 2000);
     </script>
 </body>
 
