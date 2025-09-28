@@ -332,6 +332,14 @@
             h2.appendChild(span);
         });
 
+        document.addEventListener("DOMContentLoaded", function () {
+            const hireBtn = document.querySelector(".button-4[role='button']");
+            if (hireBtn) {
+                hireBtn.addEventListener("click", function () {
+                    window.location.href = "tel:+919876543210";
+                });
+            }
+        });
 
     </script>
 </body>
